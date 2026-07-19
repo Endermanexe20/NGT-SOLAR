@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us — SolarClean</title>
+<meta name="description" content="Get in touch with SolarClean for quotes, support, or spare part questions.">
+
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="font-body text-ink-900 bg-white antialiased">
+
+<header id="navbar" class="sticky top-0 z-50 transition-all duration-300">
+  <nav class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex items-center justify-between py-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/images/logo-dark.png" class="h-9 w-9 object-contain" alt="SolarClean logo">
+        <span class="font-display font-bold text-lg">Solar<span class="text-brand">Clean</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 font-medium text-ink-900/75">
+        <a href="index.html" class="hover:text-brand transition-colors">Home</a>
+        <a href="store.html" class="hover:text-brand transition-colors">Store</a>
+        <a href="contact.html" class="text-brand">Contact</a>
+      </div>
+
+      <div class="hidden md:block">
+        <a href="#contact-form" class="inline-flex items-center gap-2 rounded-full bg-ink-900 text-white px-5 py-2.5 text-sm font-semibold hover:bg-brand transition-colors">
+          Get a Quote
+        </a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden relative h-9 w-9 flex items-center justify-center text-ink-900" aria-label="Toggle menu" aria-expanded="false">
+        <i id="icon-open" class="fa-solid fa-bars text-2xl leading-none absolute"></i>
+        <i id="icon-close" class="fa-solid fa-xmark text-2xl leading-none absolute"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu-panel md:hidden border-t border-ink-900/10 bg-white/95 backdrop-blur shadow-xl">
+    <div class="mobile-menu-inner">
+      <div class="px-6 py-6 flex flex-col gap-1 font-medium text-ink-900/80">
+        <a href="index.html" class="menu-link hover:text-brand py-3 border-b border-ink-900/5">Home</a>
+        <a href="store.html" class="menu-link hover:text-brand py-3 border-b border-ink-900/5">Store</a>
+        <a href="contact.html" class="menu-link text-brand py-3 border-b border-ink-900/5">Contact</a>
+        <a href="#contact-form" class="menu-link rounded-full bg-ink-900 text-white px-5 py-3 text-center font-semibold mt-4">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="menu-backdrop" class="fixed inset-0 bg-ink-900/40 opacity-0 pointer-events-none md:hidden z-40"></div>
+
+<section class="relative overflow-hidden bg-mist">
+  <div class="glow-orb bg-brand w-[360px] h-[360px] -top-24 -left-24"></div>
+  <div class="relative mx-auto max-w-4xl px-6 lg:px-8 pt-16 pb-14 text-center fade-up in-view">
+    <span class="inline-flex items-center gap-2 rounded-full bg-white border border-ink-900/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand shadow-card">
+      WE'D LOVE TO HEAR FROM YOU
+    </span>
+    <h1 class="mt-6 font-display font-extrabold text-4xl sm:text-5xl">Get In Touch</h1>
+    <p class="mt-4 text-lg text-ink-900/60 max-w-xl mx-auto">Have a question about a quote, an order, or your system? Send us a message.</p>
+  </div>
+</section>
+
+<section class="mx-auto max-w-7xl px-6 lg:px-8 -mt-10 relative z-10 pb-6">
+  <div class="grid sm:grid-cols-2 max-w-2xl mx-auto gap-6">
+    <div class="fade-up rounded-2xl bg-white border border-ink-900/8 shadow-card p-7 border-b-4 border-b-brand">
+      <div class="h-11 w-11 rounded-xl bg-sky-light flex items-center justify-center text-brand text-xl"><i class="fa-solid fa-phone"></i></div>
+      <h3 class="mt-4 font-display font-semibold">Call Us</h3>
+      <button type="button" class="copy-btn mt-1 inline-flex items-center gap-1.5 text-sm text-ink-900/60 hover:text-brand transition-colors" data-copy="01557532051" aria-label="Copy phone number">
+        01557532051
+        <i class="fa-regular fa-copy text-xs opacity-60"></i>
+      </button>
+    </div>
+    <div class="fade-up rounded-2xl bg-white border border-ink-900/8 shadow-card p-7 border-b-4 border-b-brand">
+      <div class="h-11 w-11 rounded-xl bg-sky-light flex items-center justify-center text-brand text-xl"><i class="fa-solid fa-envelope"></i></div>
+      <h3 class="mt-4 font-display font-semibold">Email Us</h3>
+      <button type="button" class="copy-btn mt-1 inline-flex items-center gap-1.5 text-sm text-ink-900/60 hover:text-brand transition-colors" data-copy="ngtsolarsolutionegypt@gmail.com" aria-label="Copy email address">
+        ngtsolarsolutionegypt@gmail.com
+        <i class="fa-regular fa-copy text-xs opacity-60"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-3xl px-6 lg:px-8 py-16">
+  <div id="contact-form" class="rounded-xl2 bg-white border border-ink-900/8 shadow-soft p-6 sm:p-10 fade-up">
+    <h2 class="font-display font-bold text-2xl sm:text-3xl text-center">Send Us a Message</h2>
+    <p class="mt-2 text-center text-ink-900/55">We usually reply within one business day.</p>
+
+    <form id="contactForm" action="https://formsubmit.co/ajax/ngtsolarsolutionegypt@gmail.com" method="POST" class="mt-8 space-y-5">
+      <input type="hidden" name="_subject" value="New contact message — SolarClean site">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="grid sm:grid-cols-3 gap-5">
+        <div>
+          <label for="name" class="block text-sm font-semibold mb-1.5">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name"
+            class="w-full rounded-xl border border-ink-900/15 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-semibold mb-1.5">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@email.com"
+            class="w-full rounded-xl border border-ink-900/15 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent">
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-semibold mb-1.5">Phone</label>
+          <input type="tel" id="phone" name="phone" required placeholder="Your phone"
+            class="w-full rounded-xl border border-ink-900/15 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent">
+        </div>
+      </div>
+
+      <div>
+        <label for="subject" class="block text-sm font-semibold mb-1.5">Subject</label>
+        <input type="text" id="subject" name="subject" required placeholder="How can we help?"
+          class="w-full rounded-xl border border-ink-900/15 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent">
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-semibold mb-1.5">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."
+          class="w-full rounded-xl border border-ink-900/15 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"></textarea>
+      </div>
+
+      <button type="submit" class="w-full rounded-xl bg-brand text-white font-semibold py-3.5 hover:bg-brand-dark transition-colors shadow-soft">
+        Send Message
+      </button>
+
+      <p id="formStatus" class="hidden"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="bg-ink-900 border-t border-white/10">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="lg:col-span-2">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/images/logo-white.png" class="h-9 w-9 object-contain" alt="SolarClean logo">
+        <span class="font-display font-bold text-lg text-white">Solar<span class="text-sky-mid">Clean</span></span>
+      </a>
+      <p class="mt-4 text-white/55 text-sm max-w-sm">Automated cleaning, installation, and monitoring systems that keep solar panels performing at peak output — year-round, hands-off.</p>
+    </div>
+
+    <div>
+      <h4 class="font-display font-semibold text-white">Quick Links</h4>
+      <ul class="mt-4 space-y-3 text-sm text-white/55">
+        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="store.html" class="hover:text-white transition-colors">Store</a></li>
+        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+        <li><a href="checkout.html" class="hover:text-white transition-colors">Checkout</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-display font-semibold text-white">Contact</h4>
+      <ul class="mt-4 space-y-3 text-sm text-white/55">
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-phone text-sky-mid w-4"></i>
+          <button type="button" class="copy-btn inline-flex items-center gap-1.5 hover:text-white transition-colors" data-copy="01557532051" aria-label="Copy phone number">
+            01557532051
+            <i class="fa-regular fa-copy text-xs opacity-60"></i>
+          </button>
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-sky-mid w-4"></i>
+          <button type="button" class="copy-btn inline-flex items-center gap-1.5 hover:text-white transition-colors break-all text-left" data-copy="ngtsolarsolutionegypt@gmail.com" aria-label="Copy email address">
+            ngtsolarsolutionegypt@gmail.com
+            <i class="fa-regular fa-copy text-xs opacity-60 shrink-0"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
+      <p>© 2026 SolarClean. All rights reserved.</p>
+      <p>Built for cleaner, smarter solar.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/copy.js"></script>
+<script src="assets/js/forms.js"></script>
+<script>
+  handleFormspreeSubmit(
+    document.getElementById('contactForm'),
+    document.getElementById('formStatus'),
+    "Thanks — your message is on its way. We'll get back to you soon."
+  );
+</script>
+</body>
+</html>

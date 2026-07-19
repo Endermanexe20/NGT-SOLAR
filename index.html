@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SolarClean — Automated Solar Panel Cleaning Systems</title>
+<meta name="description" content="Automated cleaning, installation, monitoring and remote control for solar panel systems. Keep your panels at peak output year-round.">
+
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="font-body text-ink-900 bg-white antialiased">
+
+<header id="navbar" class="sticky top-0 z-50 transition-all duration-300">
+  <nav class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex items-center justify-between py-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/images/logo-dark.png" class="h-9 w-9 object-contain" alt="SolarClean logo">
+        <span class="font-display font-bold text-lg">Solar<span class="text-brand">Clean</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 font-medium text-ink-900/75">
+        <a href="index.html" class="text-brand">Home</a>
+        <a href="store.html" class="hover:text-brand transition-colors">Store</a>
+        <a href="contact.html" class="hover:text-brand transition-colors">Contact</a>
+      </div>
+
+      <div class="hidden md:block">
+        <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-ink-900 text-white px-5 py-2.5 text-sm font-semibold hover:bg-brand transition-colors">
+          Get a Quote
+        </a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden relative h-9 w-9 flex items-center justify-center text-ink-900" aria-label="Toggle menu" aria-expanded="false">
+        <i id="icon-open" class="fa-solid fa-bars text-2xl leading-none absolute"></i>
+        <i id="icon-close" class="fa-solid fa-xmark text-2xl leading-none absolute"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu-panel md:hidden border-t border-ink-900/10 bg-white/95 backdrop-blur shadow-xl">
+    <div class="mobile-menu-inner">
+      <div class="px-6 py-6 flex flex-col gap-1 font-medium text-ink-900/80">
+        <a href="index.html" class="menu-link text-brand py-3 border-b border-ink-900/5">Home</a>
+        <a href="store.html" class="menu-link hover:text-brand py-3 border-b border-ink-900/5">Store</a>
+        <a href="contact.html" class="menu-link hover:text-brand py-3 border-b border-ink-900/5">Contact</a>
+        <a href="contact.html" class="menu-link rounded-full bg-ink-900 text-white px-5 py-3 text-center font-semibold mt-4">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="menu-backdrop" class="fixed inset-0 bg-ink-900/40 opacity-0 pointer-events-none md:hidden z-40"></div>
+
+<section class="relative overflow-hidden bg-mist">
+  <div class="glow-orb bg-brand w-[420px] h-[420px] -top-32 -left-32"></div>
+  <div class="glow-orb bg-sun w-[300px] h-[300px] top-40 right-0"></div>
+
+  <div class="relative mx-auto max-w-7xl px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="fade-up in-view">
+      <span class="inline-flex items-center gap-2 rounded-full bg-white border border-ink-900/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand shadow-card">
+        AUTOMATED PANEL CARE
+      </span>
+      <h1 class="mt-6 font-display font-extrabold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.08] text-ink-900">
+        Panels this clean<br class="hidden sm:block"> shouldn't need<br class="hidden sm:block">
+        <span class="sweep in-view text-brand">a person on the roof.</span>
+      </h1>
+      <p class="mt-6 text-lg text-ink-900/65 max-w-lg">
+        SolarClean's automated systems wash, monitor, and report on your panels around the clock — restoring the output that dust and grime quietly steal.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="store.html" class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-7 py-3.5 font-semibold shadow-soft hover:bg-brand-dark transition-colors">
+          Explore the Store
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-2 rounded-full border border-ink-900/15 px-7 py-3.5 font-semibold text-ink-900 hover:border-brand hover:text-brand transition-colors">
+          Talk to Us
+        </a>
+      </div>
+    </div>
+
+    <div class="relative fade-up in-view">
+      <div class="relative rounded-xl2 bg-white shadow-soft overflow-hidden border border-ink-900/5 animate-float">
+        <div class="hero-sweep-line"></div>
+        <img src="assets/images/solar-system.png" alt="SolarClean automated cleaning system on a rooftop solar array" class="w-full h-[340px] sm:h-[420px] object-cover">
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-card border border-ink-900/5 px-5 py-4 hidden sm:block">
+        <p class="font-mono text-2xl font-semibold text-brand">+18%</p>
+        <p class="text-xs text-ink-900/55 font-medium">avg. output recovered</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-ink-900">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+    <div class="fade-up">
+      <p class="font-mono text-2xl sm:text-3xl font-semibold text-white">+18%</p>
+      <p class="text-xs sm:text-sm text-white/55 mt-1">output recovered</p>
+    </div>
+    <div class="fade-up">
+      <p class="font-mono text-2xl sm:text-3xl font-semibold text-white">72 hrs</p>
+      <p class="text-xs sm:text-sm text-white/55 mt-1">saved per season</p>
+    </div>
+    <div class="fade-up">
+      <p class="font-mono text-2xl sm:text-3xl font-semibold text-white">24/7</p>
+      <p class="text-xs sm:text-sm text-white/55 mt-1">remote monitoring</p>
+    </div>
+    <div class="fade-up">
+      <p class="font-mono text-2xl sm:text-3xl font-semibold text-white">0</p>
+      <p class="text-xs sm:text-sm text-white/55 mt-1">rooftop visits needed</p>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-28">
+  <div class="max-w-2xl mx-auto text-center">
+    <p class="text-brand font-semibold text-sm tracking-wide">WHAT WE DO</p>
+    <h2 class="sweep mt-3 font-display font-bold text-3xl sm:text-4xl">Our Services</h2>
+    <p class="mt-5 text-ink-900/60 text-lg">Smart, sustainable solutions that keep every panel performing at its best.</p>
+  </div>
+
+  <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="fade-up group rounded-2xl bg-white border border-ink-900/8 shadow-card p-7 hover:-translate-y-2 hover:shadow-soft transition-all duration-300">
+      <div class="h-12 w-12 rounded-xl bg-sky-light flex items-center justify-center text-brand text-xl"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+      <h3 class="mt-5 font-display font-semibold text-lg">Automated Cleaning</h3>
+      <p class="mt-2 text-sm text-ink-900/60">Smart system using water and air to clean panels without manual labor.</p>
+    </div>
+    <div class="fade-up group rounded-2xl bg-white border border-ink-900/8 shadow-card p-7 hover:-translate-y-2 hover:shadow-soft transition-all duration-300">
+      <div class="h-12 w-12 rounded-xl bg-sky-light flex items-center justify-center text-brand text-xl"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+      <h3 class="mt-5 font-display font-semibold text-lg">Installation & Setup</h3>
+      <p class="mt-2 text-sm text-ink-900/60">Professional installation tailored to your roof layout and array size.</p>
+    </div>
+    <div class="fade-up group rounded-2xl bg-white border border-ink-900/8 shadow-card p-7 hover:-translate-y-2 hover:shadow-soft transition-all duration-300">
+      <div class="h-12 w-12 rounded-xl bg-sky-light flex items-center justify-center text-brand text-xl"><i class="fa-solid fa-chart-line"></i></div>
+      <h3 class="mt-5 font-display font-semibold text-lg">Performance Monitoring</h3>
+      <p class="mt-2 text-sm text-ink-900/60">Track panel efficiency and cleaning history with live analytics.</p>
+    </div>
+    <div class="fade-up group rounded-2xl bg-white border border-ink-900/8 shadow-card p-7 hover:-translate-y-2 hover:shadow-soft transition-all duration-300">
+      <div class="h-12 w-12 rounded-xl bg-sky-light flex items-center justify-center text-brand text-xl"><i class="fa-solid fa-mobile-screen-button"></i></div>
+      <h3 class="mt-5 font-display font-semibold text-lg">Remote Control App</h3>
+      <p class="mt-2 text-sm text-ink-900/60">Schedule cleaning cycles and get alerts from anywhere.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-mist">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-28">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-brand font-semibold text-sm tracking-wide">HOW IT WORKS</p>
+      <h2 class="sweep mt-3 font-display font-bold text-3xl sm:text-4xl">From install to spotless, on autopilot</h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-8">
+      <div class="fade-up relative rounded-2xl bg-white p-8 shadow-card">
+        <span class="font-mono text-brand/40 text-4xl font-semibold">01</span>
+        <h3 class="mt-4 font-display font-semibold text-lg">Install</h3>
+        <p class="mt-2 text-sm text-ink-900/60">Our team fits the cleaning rig and sensors to your existing array — no panel replacement required.</p>
+      </div>
+      <div class="fade-up relative rounded-2xl bg-white p-8 shadow-card">
+        <span class="font-mono text-brand/40 text-4xl font-semibold">02</span>
+        <h3 class="mt-4 font-display font-semibold text-lg">Monitor</h3>
+        <p class="mt-2 text-sm text-ink-900/60">Sensors track dust buildup and output loss in real time, feeding the app dashboard.</p>
+      </div>
+      <div class="fade-up relative rounded-2xl bg-white p-8 shadow-card">
+        <span class="font-mono text-brand/40 text-4xl font-semibold">03</span>
+        <h3 class="mt-4 font-display font-semibold text-lg">Auto-clean</h3>
+        <p class="mt-2 text-sm text-ink-900/60">Once efficiency dips, the system runs a wash-and-dry cycle automatically — no ladder required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-28">
+  <div class="max-w-2xl mx-auto text-center">
+    <p class="text-brand font-semibold text-sm tracking-wide">WHO WE ARE</p>
+    <h2 class="sweep mt-3 font-display font-bold text-3xl sm:text-4xl">Our Team</h2>
+    <p class="mt-5 text-ink-900/60 text-lg">Meet the people behind SolarClean.</p>
+  </div>
+
+  <div class="mt-14 grid sm:grid-cols-2 max-w-2xl mx-auto gap-8">
+    <div class="fade-up relative text-center rounded-2xl bg-white border border-ink-900/8 shadow-card p-8">
+      <img src="assets/images/member1.png" alt="Mohamed Mehana" class="mt-6 h-28 w-28 rounded-full object-cover mx-auto ring-4 ring-sky-light">
+      <h3 class="mt-5 font-display font-semibold text-lg">Mohamed Mehana</h3>
+      <span class="absolute top-4 left-1/2 -translate-x-1/2 rounded-full bg-brand text-white text-xs font-semibold px-3 py-1">Team Leader</span>
+      <p class="mt-1 text-sm text-ink-900/55">App Developer</p>
+    </div>
+    <div class="fade-up text-center rounded-2xl bg-white border border-ink-900/8 shadow-card p-8">
+      <img src="assets/images/member2.png" alt="Nada Nader" class="h-28 w-28 rounded-full object-cover mx-auto ring-4 ring-sky-light">
+      <h3 class="mt-5 font-display font-semibold text-lg">Maryam Mosaad</h3>
+      <p class="mt-1 text-sm text-ink-900/55">Co Presenter & Web Developer</p>
+    </div>
+  </div>
+</section>
+
+<section class="relative overflow-hidden bg-ink-900">
+  <div class="glow-orb bg-brand w-[420px] h-[420px] -bottom-40 -right-32"></div>
+  <div class="relative mx-auto max-w-4xl px-6 lg:px-8 py-20 text-center">
+    <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Ready to see your panels at full power again?</h2>
+    <p class="mt-4 text-white/60 text-lg">Get a free quote for automated cleaning, or browse the store for parts and the full system.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="contact.html" class="rounded-full bg-white text-ink-900 px-7 py-3.5 font-semibold hover:bg-sky-light transition-colors">Get a Quote</a>
+      <a href="store.html" class="rounded-full border border-white/25 text-white px-7 py-3.5 font-semibold hover:border-white transition-colors">Visit the Store</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink-900 border-t border-white/10">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="lg:col-span-2">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/images/logo-white.png" class="h-9 w-9 object-contain" alt="SolarClean logo">
+        <span class="font-display font-bold text-lg text-white">Solar<span class="text-sky-mid">Clean</span></span>
+      </a>
+      <p class="mt-4 text-white/55 text-sm max-w-sm">Automated cleaning, installation, and monitoring systems that keep solar panels performing at peak output — year-round, hands-off.</p>
+    </div>
+
+    <div>
+      <h4 class="font-display font-semibold text-white">Quick Links</h4>
+      <ul class="mt-4 space-y-3 text-sm text-white/55">
+        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="store.html" class="hover:text-white transition-colors">Store</a></li>
+        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+        <li><a href="checkout.html" class="hover:text-white transition-colors">Checkout</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-display font-semibold text-white">Contact</h4>
+      <ul class="mt-4 space-y-3 text-sm text-white/55">
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-phone text-sky-mid w-4"></i>
+          <button type="button" class="copy-btn inline-flex items-center gap-1.5 hover:text-white transition-colors" data-copy="01557532051" aria-label="Copy phone number">
+            01557532051
+            <i class="fa-regular fa-copy text-xs opacity-60"></i>
+          </button>
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-sky-mid w-4"></i>
+          <button type="button" class="copy-btn inline-flex items-center gap-1.5 hover:text-white transition-colors break-all text-left" data-copy="ngtsolarsolutionegypt@gmail.com" aria-label="Copy email address">
+            ngtsolarsolutionegypt@gmail.com
+            <i class="fa-regular fa-copy text-xs opacity-60 shrink-0"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
+      <p>© 2026 SolarClean. All rights reserved.</p>
+      <p>Built for cleaner, smarter solar.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/copy.js"></script>
+</body>
+</html>
